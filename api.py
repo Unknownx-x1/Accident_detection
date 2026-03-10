@@ -8,7 +8,7 @@ import io
 app = FastAPI(title="Accident Detection API")
 
 # Load model once when server starts
-model = tf.keras.models.load_model("accident_model.keras",compile=False)
+model = tf.keras.models.load_model("accident_model.keras",compile=False,safe_mode=False)
 
 IMG_SIZE = 224
 
